@@ -9,11 +9,20 @@
 
 <body>
     <script>
-        alert("hello, world");
-        alert("second alert");
+        
+        showDistance(10,8);
+        var middleDistance = getDistance(34,2.4);
+        showDistance(1,1);
 
-        var mytext = undefined;
-        alert(mytext);
+        alert("The middle one is " + middleDistance);
+
+        function showDistance(speed, time) {
+            alert(speed * time);
+        }
+
+        function getDistance(speed, time) {
+            return speed * time;
+        }
     </script>
 </body>
 
