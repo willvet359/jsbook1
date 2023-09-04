@@ -10,11 +10,35 @@
 <body>
     <script>
         
-        showDistance(10,8);
+        //showDistance(10,8);
         var middleDistance = getDistance(34,2.4);
-        showDistance(1,1);
+        //showDistance(1,1);
 
         alert("The middle one is " + middleDistance);
+
+        if (middleDistance >= 100) {
+            alert("That's a long ways.");
+        } else if (middleDistance >= 50) {
+            alert("That's pretty far.");
+        } else {
+            alert("That's not too far.");
+        }
+
+        var color = "greenx";
+        switch (color) {
+            case "yellow":
+                alert ("It's yellow.");
+                break;
+            case "green":
+                alert("It's green");
+                break;
+            case "black":
+                alert("It's black.");
+                break;
+            default:
+                alert("What color is it?");
+        }
+
 
         function showDistance(speed, time) {
             alert(speed * time);
