@@ -10,40 +10,36 @@
     </div>
 
     <script>
-        var intervalID = setInterval(drawText, 1000);
+        /* var something = youSayGoodbye();
+        something();
 
-        function drawText() {
-            document.querySelector("p").textContent += "#";
-        }
+        function youSayGoodbye() {
+            alert("Goodbye");
 
-        /* var timeID = setTimeout(showAlert, 3000);
+            function andISayHello() {
+                alert("Hello");
+            }
 
-        function showAlert() {
-            alert("bark");
-        }
-
-        var timeoutID;
- 
-        function setup() {
-            this.addEventListener("mousemove", resetTimer, false);
-            this.addEventListener("mousedown", resetTimer, false);
-            this.addEventListener("keypress", resetTimer, false);
-            this.addEventListener("DOMMouseScroll", resetTimer, false);
-            this.addEventListener("mousewheel", resetTimer, false);
-            this.addEventListener("touchmove", resetTimer, false);
-            this.addEventListener("MSPointerMove", resetTimer, false);
-        }
-        
-        setup();
-        
-        function resetTimer(e) {
-            window.clearTimeout(timeoutID);
-            timeoutID = window.setTimeout(goInactive, 2000);
-        }
-        
-        function goInactive() {
-            alert("do something!");
+            return andISayHello;
         } */
+
+        function stopWatch() {
+            var startTime = Date.now();
+
+            function getDelay() {
+                var elapsedTime = Date.now() - startTime;
+                alert(elapsedTime);
+            }
+
+            return getDelay;
+        }
+
+        var timer = stopWatch();
+        for (var i = 0; i < 100000; i++) {
+            var foo = Math.random() * 10000;
+        }
+
+        timer();
         
     </script>
 </body>
