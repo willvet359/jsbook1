@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>exercises 2</title>
+</head>
+<body>
+    <div>main page content<br>
+        <p>
+            Howdy.
+        </p>
+    </div>
+
+    <script>
+        var intervalID = setInterval(drawText, 1000);
+
+        function drawText() {
+            document.querySelector("p").textContent += "#";
+        }
+
+        /* var timeID = setTimeout(showAlert, 3000);
+
+        function showAlert() {
+            alert("bark");
+        }
+
+        var timeoutID;
+ 
+        function setup() {
+            this.addEventListener("mousemove", resetTimer, false);
+            this.addEventListener("mousedown", resetTimer, false);
+            this.addEventListener("keypress", resetTimer, false);
+            this.addEventListener("DOMMouseScroll", resetTimer, false);
+            this.addEventListener("mousewheel", resetTimer, false);
+            this.addEventListener("touchmove", resetTimer, false);
+            this.addEventListener("MSPointerMove", resetTimer, false);
+        }
+        
+        setup();
+        
+        function resetTimer(e) {
+            window.clearTimeout(timeoutID);
+            timeoutID = window.setTimeout(goInactive, 2000);
+        }
+        
+        function goInactive() {
+            alert("do something!");
+        } */
+        
+    </script>
+</body>
+
+</html>
