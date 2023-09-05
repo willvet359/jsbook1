@@ -24,7 +24,7 @@
             alert("That's not too far.");
         }
 
-        var color = "greenx";
+        /* var color = "greenx";
         switch (color) {
             case "yellow":
                 alert ("It's yellow.");
@@ -37,8 +37,21 @@
                 break;
             default:
                 alert("What color is it?");
+        } */
+
+        var count = 0;
+        function saySomething() {
+            document.writeln("hello!<br>");
         }
 
+        /* for (var i = 0; i < count; i++) {
+            saySomething();
+        } */
+
+        while (count < 10) {
+            saySomething();
+            count++;
+        }
 
         function showDistance(speed, time) {
             alert(speed * time);
