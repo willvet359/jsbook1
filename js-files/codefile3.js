@@ -1,26 +1,18 @@
 alert("yup");
 
-function showDistance(speed, time) {
-    alert(speed * time);
-}
-
-showDistance(5,1);
-showDistance(23,15);
-
-var funnyGuy = {};
-funnyGuy.firstName = "Conan";
-funnyGuy.lastName = "O'Brien";
-
-funnyGuy["firstName"] = "Eddie";
-funnyGuy["lastName"] = "Murphy";
-
-var funnyGuy = {
-    firstName: "Hurricane",
-    lastName: "theDog",
-
-    getName: function() {
-    return "Name is: " + this.firstName + " " + this.lastName;
+var person = {
+    getName: function () {
+        return "Name is: " + this.firstName + " " + this.lastName;
     }
 };
 
+var funnyGuy = Object.create(person);
+funnyGuy.firstName = "Eddie";
+funnyGuy.lastName = "Murphy";
+
+var theDude = Object.create(person);
+theDude.firstName = "Jeffrey";
+theDude.lastName = "Lebowski";
+
 alert(funnyGuy.getName());
+alert(theDude.getName());
