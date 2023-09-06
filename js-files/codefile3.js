@@ -7,9 +7,20 @@ function showDistance(speed, time) {
 showDistance(5,1);
 showDistance(23,15);
 
-var names = ["JP", "Julio", "Gino", "Teo"];
-var alsoNames = new Array("Ty", "Cal", "Jose", "Josh", "Mike");
+var funnyGuy = {};
+funnyGuy.firstName = "Conan";
+funnyGuy.lastName = "O'Brien";
 
-var roundNumber = Math.round(3.14);
+funnyGuy["firstName"] = "Eddie";
+funnyGuy["lastName"] = "Murphy";
 
-var today = new Date();
+var funnyGuy = {
+    firstName: "Hurricane",
+    lastName: "theDog",
+
+    getName: function() {
+    return "Name is: " + this.firstName + " " + this.lastName;
+    }
+};
+
+alert(funnyGuy.getName());
