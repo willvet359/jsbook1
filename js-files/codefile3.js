@@ -1,18 +1,23 @@
 alert("yup");
 
-var person = {
-    getName: function () {
-        return "Name is: " + this.firstName + " " + this.lastName;
+var isLucky = function () {
+    var foo = Math.round(Math.random() * 100);
+
+    if (foo > 50) {
+        return "You are lucky!";
+    } else {
+        return "You are not lucky.";
     }
 };
 
-var funnyGuy = Object.create(person);
-funnyGuy.firstName = "Eddie";
-funnyGuy.lastName = "Murphy";
+var me = isLucky();
+alert(me);
 
-var theDude = Object.create(person);
-theDude.firstName = "Jeffrey";
-theDude.lastName = "Lebowski";
+window.setTimeout(function () {
+    alert("everything is awesome");
+}, 2000);
 
-alert(funnyGuy.getName());
-alert(theDude.getName());
+(function() {
+    var shout = "I AM ALIVE";
+    alert(shout);
+})();
