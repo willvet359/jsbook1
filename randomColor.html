@@ -13,12 +13,20 @@
         document.addEventListener("click", changeColor, false);
 
         function changeColor() {
-            var color = generateRandomColor();
+            var values = generateRandomColor();
+            color = values[0];
             document.body.style.backgroundColor = color;
 
             var pElem = document.createElement("p");
             pElem.textContent = "This color is " + color;
             document.body.appendChild(pElem);
+
+            var total = values[1];
+            if (total < 300) {
+                pElem.style.color = "#FFFFFF";
+            } else {
+                pElem.style.color = "#000000";
+            }
 
         }
 
@@ -31,8 +39,10 @@
             var b = Math.floor(Math.random() * (max - min + 1)) + min;
 
             var color = "rgb(" + r + ", " + g + ", " + b + ")";
+            var total = r+g+b;
+            var returnValues = [color, total];
 
-            return color;
+            return returnValues;
         }
         
 
