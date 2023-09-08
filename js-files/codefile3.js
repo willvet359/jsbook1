@@ -1,6 +1,15 @@
 alert("yup");
 
-var isLucky = function () {
+var images = document.querySelectorAll(".theImage");
+
+for (i = 0; i < images.length; i++) {
+    var image = images[i];
+    alert(image.getAttribute("src"));
+}
+
+
+
+/* var isLucky = function () {
     var foo = Math.round(Math.random() * 100);
 
     if (foo > 50) {
@@ -20,4 +29,4 @@ window.setTimeout(function () {
 (function() {
     var shout = "I AM ALIVE";
     alert(shout);
-})();
+})(); */
