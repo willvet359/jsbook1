@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hey</title>
+</head>
+
+<body>
+
+    <div>
+        <img id="myPic" src="blah.png" height="400" width="400"/>
+    </div>>
+    <script>
+        let myPic = document.querySelector("#myPic");
+        myPic.addEventListener("mousemove", mouseMove, false);
+
+        function mouseMove(e) {
+            console.log("Mouse is moving at " + Date.now());
+            console.log(e.clientX + " " + e.clientY);
+        }
+    </script>
+</body>
+</html>
