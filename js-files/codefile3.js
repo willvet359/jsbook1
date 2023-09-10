@@ -1,15 +1,32 @@
 alert("yup");
 
-function showDistance(speed, time) {
-    alert(speed * time);
+var images = document.querySelectorAll(".theImage");
+
+for (i = 0; i < images.length; i++) {
+    var image = images[i];
+    alert(image.getAttribute("src"));
 }
 
-showDistance(5,1);
-showDistance(23,15);
 
-var names = ["JP", "Julio", "Gino", "Teo"];
-var alsoNames = new Array("Ty", "Cal", "Jose", "Josh", "Mike");
 
-var roundNumber = Math.round(3.14);
+/* var isLucky = function () {
+    var foo = Math.round(Math.random() * 100);
 
-var today = new Date();
+    if (foo > 50) {
+        return "You are lucky!";
+    } else {
+        return "You are not lucky.";
+    }
+};
+
+var me = isLucky();
+alert(me);
+
+window.setTimeout(function () {
+    alert("everything is awesome");
+}, 2000);
+
+(function() {
+    var shout = "I AM ALIVE";
+    alert(shout);
+})(); */
