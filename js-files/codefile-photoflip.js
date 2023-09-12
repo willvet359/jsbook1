@@ -29,11 +29,25 @@ function determineDirection(e) {
 function flipPhoto(dir) {
     
     var thePicElement = document.querySelector("#thePic");
+    var imgUrl = thePicElement.getAttribute("src");
+    var imgNumber = imgUrl.slice(13,15);
     
     if (dir == "left") {
-        thePicElement.setAttribute("src", "resources/Pic04.jpg");
+        if (imgNumber > 1) {
+            imgNumber--;
+        } else {
+            return;
+        }
+        imgUrl = "resources/Pic0" + imgNumber.toString() + ".jpg"
+        thePicElement.setAttribute("src", imgUrl);
     } else if (dir == "right") {
-        thePicElement.setAttribute("src", "resources/Pic02.jpg");
+        if (imgNumber < 4) {
+            imgNumber++;
+        } else {
+            return;
+        }
+        imgUrl = "resources/Pic0" + imgNumber.toString() + ".jpg"
+        thePicElement.setAttribute("src", imgUrl);
     }
     
 }
