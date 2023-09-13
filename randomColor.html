@@ -22,7 +22,10 @@
             document.body.appendChild(pElem);
 
             var total = values[1];
-            if (total < 300) {
+            var r = values[2];
+            var g = values[3];
+            var b = values[4];
+            if (total < 300 || r < 50 || g < 50 || b < 50) {
                 pElem.style.color = "#FFFFFF";
             } else {
                 pElem.style.color = "#000000";
@@ -40,7 +43,7 @@
 
             var color = "rgb(" + r + ", " + g + ", " + b + ")";
             var total = r+g+b;
-            var returnValues = [color, total];
+            var returnValues = [color, total, r, g, b];
 
             return returnValues;
         }
