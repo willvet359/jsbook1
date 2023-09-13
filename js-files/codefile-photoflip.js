@@ -49,6 +49,10 @@ function flipPhoto(dir) {
         imgUrl = "resources/Pic0" + imgNumber.toString() + ".jpg"
         thePicElement.setAttribute("src", imgUrl);
     }
-    
 }
 
+/* document.window.addEventListener("load", onLoad, false);
+
+function onLoad() {
+    window.focus();
+} */
