@@ -5,13 +5,19 @@
     <link rel="stylesheet" href="stylesheets/photoflip.css">
 </head>
 
-<body>
+<body onload="myFunction()">
     <div>
         <button id="left" class="button-standard" onkeydown="flipPhoto"></button>
         <img id="thePic" src="resources/Pic02.jpg" height="400" width="500"/>
         <button id="right" class="button-standard"></button>
     </div>
 
-    <script async src="js-files/codefile-photoflip.js"></script>
+    <script src="js-files/codefile-photoflip.js"></script>
+
+    <script>
+        function myFunction() {
+            console.log("hey");
+        }
+    </script> 
 </body>
 </html>
